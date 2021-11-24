@@ -1,0 +1,45 @@
+<html>
+<link rel="stylesheet" href="websitedesign.css">
+<head>
+<title>Know your PC!</title>
+</head>
+<body>
+<div>
+<h1 class="heading">Sayee Sreedhar Works</h1></div>
+<h1>Digital Clock</h1>
+<section>
+    <div class="clock">
+        
+        <h1 id="hour" class="hour" >00</h1>
+        <h1 class="dot">:</h1>
+        
+        <h1 id="minute" class="minute" >00</h1>
+        <h1 class="dot">:</h1>
+        
+        <h1 id="seconds" class="seconds">00</h1>
+        <span id="ampm" class="ampm">AM</span>
+        <script>
+        function clock(){
+            var hour=document.getElementById("hour");
+            var minute=document.getElementById('minute');
+            var second=document.getElementById('seconds');
+            var f=document.getElementById('ampm');
+            var ampm="AM";
+            var h=new Date().getHours();
+            var m=new Date().getMinutes();
+            var s=new Date().getSeconds();
+            if(h>12){
+                h=h-12;
+                ampm="PM"
+            }
+            hour.innerHTML=h;
+            minute.innerHTML=m;
+            second.innerHTML=s;
+        f.innerHTML=ampm;}
+             interval=setInterval(clock,1000);
+            
+        </script>
+    </div>
+</section>
+</body>
+</html>
